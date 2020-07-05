@@ -30,7 +30,7 @@ Este método nos devolverá una de las siguientes opciones:
       
 **predict_proba_cluster** --> Donde nos devuelve la probabilidad de cada uno de las etiquetas por la cual se ha entrenado el sistema. Requiere el mismo parámetro data que requiere el método predict_cluster, devolviéndonos un array con el siguiente orden:
 
-<table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th></th>      <th>Etiqueta</th>    </tr>  </thead>  <tbody>    <tr>      <th>0</th>      <td>Inflamación Intensa</td>    </tr>    <tr>      <th>1</th>      <td>Inflamación Intensa con SobreInfección</td>    </tr>    <tr>      <th>2</th>      <td>Inflamación Intensa con Transtorno de la Coagu...</td>    </tr>    <tr>      <th>3</th>      <td>Inflamación Moderada con SobreInfección</td>    </tr>    <tr>      <th>4</th>      <td>Inflamación Moderada</td>    </tr>    <tr>      <th>5</th>      <td>Inflamación Moderada con Transtorno de la Coag...</td>    </tr>    <tr>      <th>6</th>      <td>Inflamación Leve con Transtorno de la Coagulación</td>    </tr>    <tr>      <th>7</th>      <td>Inflamación Leve con SobreInfección</td>    </tr>    <tr>      <th>8</th>      <td>Inflamación Leve</td>    </tr>  </tbody></table>
+<table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th></th>      <th>Label</th>      <th>Value</th>    </tr>  </thead>  <tbody>    <tr>      <th>0</th>      <td>Inflamación Intensa</td>      <td>0.813184</td>    </tr>    <tr>      <th>1</th>      <td>Inflamación Intensa con SobreInfección</td>      <td>0.036934</td>    </tr>    <tr>      <th>2</th>      <td>Inflamación Intensa con Transtorno de la Coagulación</td>      <td>0.014777</td>    </tr>    <tr>      <th>3</th>      <td>Inflamación Moderada con SobreInfección</td>      <td>0.015259</td>    </tr>    <tr>      <th>4</th>      <td>Inflamación Moderada</td>      <td>0.001546</td>    </tr>    <tr>      <th>5</th>      <td>Inflamación Moderada con Transtorno de la Coagulación</td>      <td>0.000703</td>    </tr>    <tr>      <th>6</th>      <td>Inflamación Leve con Transtorno de la Coagulación</td>      <td>0.105914</td>    </tr>    <tr>      <th>7</th>      <td>Inflamación Leve con SobreInfección</td>      <td>0.008835</td>    </tr>    <tr>      <th>8</th>      <td>Inflamación Leve</td>      <td>0.002848</td>    </tr>  </tbody></table>
        
 **predict_home_hospital** --> Donde nos devuelve si un paciente al llegar a la consulta se le debe de dar o no de alta. Para el uso de este método se requiere de un parámetro llamado data, que debe de tener la siguiente forma:
 
@@ -44,7 +44,7 @@ Este método no devolverá una de las siguientes opciones:
        
 **predict_proba_home_hospital** --> Donde nos devuelve la probabilidad de que un paciente se le deba dar de alta en su domicio o ingresarlo en planta. Se requiere el mismo parámetro data usado en el método predict_home_hospital. Este método nos devolverá un array donde se valoran las siguientes opciones: 
 
-<table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th></th>      <th>Etiqueta</th>    </tr>  </thead>  <tbody>    <tr>      <th>0</th>      <td>Alta en Domicilio</td>    </tr>    <tr>      <th>1</th>      <td>Alta en Domicilio - Revisión en 48 horas</td>    </tr>    <tr>      <th>2</th>      <td>Ingreso Hospitalario</td>    </tr>  </tbody></table>
+<table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th></th>      <th>Label</th>      <th>Value</th>    </tr>  </thead>  <tbody>    <tr>      <th>0</th>      <td>Alta en Domicilio</td>      <td>0.924329</td>    </tr>    <tr>      <th>1</th>      <td>Alta en Domicilio - Revisión en 48 horas</td>      <td>0.058671</td>    </tr>    <tr>      <th>2</th>      <td>Ingreso Hospitalario</td>      <td>0.017000</td>    </tr>  </tbody></table>
 
 **predict_again_hospital_predictor** --> Donde nos devuelve si un paciente, al darle de alta para que regrese a su casa, volverá a recaer por la enfermedad o se quedará en su casa. Este método requiere el uso de un parámetro data, con la siguiente forma:
 
@@ -58,7 +58,7 @@ Este método nos devolverá una de las siguientes opciones:
 
 **predict_proba_again_hospital_predictor** --> Donde nos devuelve la probabilidad de que el paciente vuelva a recaer de la enfermedad o se quedará en casa definitivamente. Para el uso de este método se requiere el mismo parámetro dada definido en el método predict_again_hospital_predictor. Este método nos devolverá las probabilidades de:
 
-<table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th></th>      <th>Etiqueta</th>    </tr>  </thead>  <tbody>    <tr>      <th>0</th>      <td>Recae</td>    </tr>    <tr>      <th>1</th>      <td>No Recae</td>    </tr>  </tbody></table>
+<table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th></th>      <th>Label</th>      <th>Value</th>    </tr>  </thead>  <tbody>    <tr>      <th>0</th>      <td>Recae</td>      <td>0.501343</td>    </tr>    <tr>      <th>1</th>      <td>No Recae</td>      <td>0.498657</td>    </tr>  </tbody></table>
 
 **predict_death_predictor** --> Donde nos devuelve si un paciente, al ingresarlo en planta, fallecerá o no debido a la enfermedad. Para el uso de este método es necesario el uso del parámetro data, con el siguiente aspecto:
 
@@ -72,8 +72,6 @@ Este método nos devolverá una de las siguientes opciones:
 
 **predict_proba_death_predictor** --> Donde nos devuelve la probabilidad de que un paciente, al ingresarlo en planta, fallezca o no. Nos devolverá un conjunto de probabilidades con el siguiente orden:
 
-<table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th></th>      <th>Etiqueta</th>    </tr>  </thead>  <tbody>    <tr>      <th>0</th>      <td>No Fallece</td>    </tr>    <tr>      <th>1</th>      <td>Fallece</td>    </tr>  </tbody></table>
-
-
+<table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th></th>      <th>Label</th>      <th>Value</th>    </tr>  </thead>  <tbody>    <tr>      <th>0</th>      <td>No Fallece</td>      <td>0.125023</td>    </tr>    <tr>      <th>1</th>      <td>Fallece</td>      <td>0.874977</td>    </tr>  </tbody></table>
 
 
